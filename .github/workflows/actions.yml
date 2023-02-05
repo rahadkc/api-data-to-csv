@@ -38,7 +38,6 @@ jobs:
           fi
 
     - name: Run the lint script
-      if: ${{ github.event_name == 'pull_request' }}
       run: npm run lint
 
     - name: Compile TypeScript to JavaScript
