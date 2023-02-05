@@ -28,7 +28,18 @@ jobs:
         node-version: 16
 
     - name: Install dependencies
-      run: npm ci
+      run: |
+          if [ -e yarn.lock ]; then
+          yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
+          npm ci
+          else
+          npm i
+          fi
+
+    - name: Run the lint script
+      if: ${{ github.event_name == 'pull_request' }}
+      run: npm run lint
 
     - name: Compile TypeScript to JavaScript
       run: npx tsc
