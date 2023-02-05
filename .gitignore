@@ -1,0 +1,9 @@
+.DS_Store
+dist
+node_modules
+.env*
+.idea
+.rest
+lib-node-server
+package-lock.json
+yarn.lock

@@ -1,0 +1,49 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
+  // HERE
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+
+  "rules": {
+    "no-undef": 0,
+    "@typescript-eslint/indent": ["off", 2,{"SwitchCase": 1,"flatTernaryExpressions": true}],
+    "linebreak-style": ["error", "unix"],
+    "@typescript-eslint/quotes": ["error", "single", { "avoidEscape": true }],
+    "@typescript-eslint/semi": ["error", "never"],
+    "no-mixed-spaces-and-tabs": 0,
+    "no-console": 0,
+    "no-irregular-whitespace": 0,
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "prettier/prettier": [
+      "error",
+      {
+        "arrowParens": "avoid",
+        "bracketSpacing": true,
+        "htmlWhitespaceSensitivity": "css",
+        "insertPragma": false,
+        "jsxBracketSameLine": false,
+        "jsxSingleQuote": false,
+        "parser": "typescript",
+        "printWidth": 100,
+        "proseWrap": "preserve",
+        "requirePragma": false,
+        "semi": false,
+        "singleQuote": true,
+        "tabWidth": 2,
+        "trailingComma": "none",
+        "useTabs": false,
+        "doc": false
+      }
+    ]
+  },
+
+  "env": {
+    "browser": true,
+    "es2021": true
+  }
+}
