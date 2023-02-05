@@ -1,6 +1,6 @@
 {
   "name": "api-data-to-csv",
-  "version": "1.9.0",
+  "version": "1.0.0",
   "description": "Automate API request and download as CSV",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
